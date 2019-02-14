@@ -1,0 +1,34 @@
+<scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+  <block wx:key="item" wx:for="{{data}}">
+    <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+      <view class="cont-1">
+        <view class="pages-container">
+          <scroll-view class="pages-wrapper">
+            <view wx:for="{{pageItems}}" wx:key="{{text}}">
+              <view class="pages-row">
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg">
+                    <image src="{{item[0].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[0].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg">
+                    <image src="{{item[1].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[1].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg">
+                    <image src="{{item[2].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[2].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+        <text class="cont-title">今日好图 | 沉默是因为我爱你</text>
+        <text class="cont-little">来自：可爱的因砸<text class="cont-date">1/19</text></text>
+      </view>
+      <view class="remove" bindtap="delItem">删除 </view>
+    </view>
+  </block>
+</scroll-view>

@@ -1,0 +1,89 @@
+<!--index.wxml-->
+<view>
+  <!-- 搜索条 -->
+  <view class='page_row'>
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class=""  placeholder="请输入关键字" value="{{searchValue}}" />
+      </view>
+    </view>
+    <view class='sousuo'bindtap="search">搜索</view>
+  </view>
+    <!--切换卡导航条-->
+  <view class="navbar">
+    <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+  </view>
+  
+  <!--表情包-->
+  <view hidden="{{currentTab!==0}}">
+    <view class="cont-1">
+        <view class="pages-container">
+          <scroll-view  class="pages-wrapper">
+            <view wx:for="{{pageItems}}" wx:key="{{text}}">
+              <view class="pages-row">
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[0].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[0].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[1].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[1].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[2].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[2].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      <text class="cont-title">今日好图 | 沉默是因为我爱你</text>
+      <text class="cont-little">来自：可爱的因砸<text class="cont-date">1/19</text></text>
+    </view>
+    <view class="cont-1">
+        <view class="pages-container">
+          <scroll-view  class="pages-wrapper">
+            <view wx:for="{{pageItems}}" wx:key="{{text}}">
+              <view class="pages-row">
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[0].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[0].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[1].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[1].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+                <view class="pages-item" style="height:{{cellHeight}}">
+                  <view class="pages-icon-wrapper-no-bg" >
+                    <image src="{{item[2].icon}}" class="pages-icon" bindtap='imgYu' data-src="{{item[2].icon}}" data-list='{{imagesList}}'></image>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+      <text class="cont-title">今日好图 | 沉默是因为我爱你</text>
+      <text class="cont-little">来自：可爱的因砸<text class="cont-date">1/19</text></text>
+    </view>
+  </view>
+  
+  <!--头像-->
+  <view hidden="{{currentTab!==1}}">
+    tab_02
+  </view>
+  
+  <!--壁纸-->
+  <view hidden="{{currentTab!==2}}">
+    tab_03
+  </view>
+  <!-- 底部导航栏 -->
+  
+</view>
+
+

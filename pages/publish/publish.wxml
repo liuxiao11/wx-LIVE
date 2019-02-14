@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit" id='2' bindreset="formReset">
+  <input style='display:none' name='program_id' value='{{program_id}}'></input>
+  <textarea class='title' placeholder="请输入标题" name="content" value='{{formdata}}' />
+  <view class="chose">
+    <view class='chosetype' bindtap='choseType' hidden='{{hidden}}'>选择类型</view>
+    <view class="type" hidden='{{hidden1}}'>
+    <text bindtap='bqb' hidden='{{hiddenbqb}}'>表情包</text>
+    <text bindtap='tx' hidden='{{hiddentx}}'>头像</text>
+    <text bindtap='bz' hidden='{{hiddenbz}}'>壁纸</text>
+    </view>
+  </view>
+  <view class="gallery">
+    <view class="item" wx:for="{{images}}" wx:key="">
+      <image src="{{item}}" data-src="{{item}}" bindtap="previewImage" mode="aspectFill" />
+      <!-- 删除按钮 -->
+      <view class="delete" bindtap="delete" data-index="{{index}}">X</view>
+    </view>
+    <view class="item" bindtap="chooseImage">
+      <view class='addIcon'>+</view>
+    </view>
+  </view>
+  <button type="primary" bindtap="submit">提交</button>
+</form>

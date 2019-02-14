@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/person/person",
+    "pages/publish/publish",
+    "pages/mylove/mylove",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "LIVE in happiness",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#101010",
+    "selectedColor": "#F5053D",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "/static/icon/fax1.png",
+        "iconPath": "/static/icon/fax.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/static/icon/publish1.png",
+        "iconPath": "/static/icon/publish.png",
+        "pagePath": "pages/publish/publish",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "/static/icon/person1.png",
+        "iconPath": "/static/icon/person.png",
+        "pagePath": "pages/person/person",
+        "text": "我的"
+      }
+    ]
+  }
+}

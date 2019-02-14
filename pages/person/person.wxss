@@ -1,0 +1,47 @@
+.userinfo-avatar {
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.userinfo-nickname{
+  color:cornflowerblue;
+}
+.userinfo{
+  position: relative;  
+  width: 750rpx;  
+  height: 400rpx;  
+  color: #fff;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center; 
+  background-color: rgb(190, 189, 189);
+}
+.mylove{
+  height: 100rpx;
+  border-bottom: 1px solid rgb(190, 189, 189);  
+  border-top: 1px solid rgb(190, 189, 189);  
+  line-height: 100rpx;
+  margin-top: 100rpx
+}
+.left{
+  width: 50rpx;
+  height: 50rpx;
+  float: right;
+  margin-top: 26rpx
+}
+.love{
+  margin-left: 20rpx
+}
+.kefu{
+  height: 100rpx;
+  border-bottom: 1px solid rgb(190, 189, 189);  
+  border-top: 1px solid rgb(190, 189, 189);  
+  line-height: 100rpx;
+  margin-top: 30rpx
+}
